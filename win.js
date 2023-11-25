@@ -18,7 +18,7 @@ document.getElementById('scoregot').innerHTML = score
 
 let home=document.getElementById('homeicon');
 home.onclick=()=>{
-    location.href='home.html'
+    location.href='index.html'
 }
 
 
