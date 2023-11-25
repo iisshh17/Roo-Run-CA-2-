@@ -10,7 +10,7 @@ counterId = setInterval(function () {
     if (count == 0) {
         clearInterval(counterId)
         let script = document.createElement('script')
-        script.src= 'game.js'
+         script.src= 'game.js'
         document.body.appendChild(script)
     
 

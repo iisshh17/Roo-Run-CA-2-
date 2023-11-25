@@ -7,6 +7,8 @@
     padding: 0;
 } 
 
+/* styling background of game over page */
+
 #bgimg{
     background-image: url(assets/wait.png);
     width: 100vw;
@@ -14,6 +16,7 @@
     background-size: cover;
 }
 
+/* styling the different messages that pop up each time user finishes the game */
 
 #message{
     color: aqua;
@@ -25,6 +28,7 @@
     font-family:'Kdam Thmor Pro', sans-serif ;
 }
 
+/* styling the playagain button */
 
 #playagain{
     position: absolute;
@@ -46,6 +50,8 @@
     cursor: pointer;
 }
 
+/* displaying the div that shows the player's name and his/her score */
+
 #scoreDisplay{
     width:50vw;
     height: 8vh;
@@ -59,6 +65,8 @@
     border-radius: 50px;
 }
 
+/* styling home icon that redirects the player to the home page of the game */
+
 #homeicon{
     position: absolute;
     right: 100px;
@@ -71,11 +79,14 @@
     cursor:pointer;
 }
 
+/* highlighting the name and score */
+
 #box3, #scoregot{
     color: 
     blue;
 } 
 
+/* media query to display the gameover page on the mobile phone screen within the specified range*/
 
 @media (max-height: 500px) and (max-width: 700px){
     #message{
@@ -107,6 +118,36 @@
         top: 5vh;
         right: 5vw;
     }
+}
+
+/* media query to display the game on the common screen of mobile phones*/
+
+@media screen and (max-width:810px) and (min-width:370px){
+    #message{
+        font-size: 30px;
+    }
+
+    #scoreDisplay{
+        width: 40vw;
+        height:15vh;
+        font-size: 18px;
+        top:40vh;
+    }
+
+    #playagain{
+        font-size:24px;
+    }
+
+    img{
+        width: 100px;
+        height: 90px;
+    }
+
+    #homeicon{
+        right:5vw;
+        top:4vh;
+    }
+    
 }
 
 

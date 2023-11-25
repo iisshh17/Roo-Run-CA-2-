@@ -6,25 +6,26 @@
     padding: 0;
 }
 
+/* styling navbar */
 nav{
     height:25vh;
     width:100%;
     background-color: plum;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Nunito Sans', sans-serif;
-    
 } 
 
+/* styling the background screen */
 .home{
     background-image: url(assets/start.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    /* background-position: center; */
     width: 100vw;
-    height: 550px;
-    }
+    height: 100vh;
+    overflow: hidden;
+}
 
-
+/* styling the start button */
 #start{
         height: 100px;
         width:250px;
@@ -50,23 +51,48 @@ nav{
 }
 
 
-@media only screen and (max-width: 700px){
+
+/* media query for phone screen of dimensions 360 x 800 */
+
+@media screen and (max-width:801px) and (min-width:300px){
     nav{
         font-size: 18px;
-        height: 22vh;
+        height: 20vh;
     }
-    #start{
-        position:absolute;
+
+    .home {
+        height: 80vh;
+    }
+
+    #start {
+        position: absolute;
         left: 100px;
         height: 75px;
-        width:150px;
+        width: 150px;
         font-size: 47px;
         border: 2px solid white;
         overflow: hidden;
+        bottom: 25vh;
     }
-    .home{
-        height: 470px;
+}
+
+/* media query for laptop screen of dimensions 1920 x 1080 */
+
+@media screen and (max-width:1921px) and (min-width:800px){
+    nav {
+        font-size: 40px;
+        height: 25vh;
     }
 
+    .home {
+        height: 75vh;
+    }
 
-};
+    #start {
+        left: 45vw;
+    }
+}
+
+
+ 
+

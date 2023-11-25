@@ -1,32 +1,17 @@
-// let isPhone = false;
-
-// if('ontouchstart' in window){
-//     isPhone = true;
-// }
-
-// if(isPhone){
-//     document.addEventListener('touchstart', handleTouchStart);
-//     document.addEventListener('touchend', handleTouchEnd);
-// } 
-// else{
-//     document.addEventListener('keydown',handleKeyDown);
-// }
-
-
-
 let score = 0;
 jump = true;
 
-
-    const audio = new Audio('./assets/Background.mp3')
-    audio.play()
-    audio.loop = true;
+// adding audio for background
+const audio = new Audio('./assets/Background.mp3')
+audio.play()
+audio.loop = true;
 
 window.addEventListener("reload", function () {
     audio.play()
     audio.loop = true;
 });
 
+// making hunter  and kangaroo movable
 let hunter = document.querySelector('.hunter')
 hunter.classList.add('hunterMove')
 
@@ -34,6 +19,7 @@ document.onclick=()=>{
         kangaroo = document.querySelector('.kangaroo');
         kangaroo.classList.add('animatekangaroo');
 
+// adding audio for cheering up
         audioForKangaroo = new Audio('./assets/Yay.mp3')
         audioForKangaroo.play()
 
@@ -42,6 +28,7 @@ document.onclick=()=>{
         }, 700);
 }
 
+// specifying keyboard key for jumping
 document.onkeydown = function (e) {
     console.log("Code is", e.keyCode)
 
@@ -49,6 +36,7 @@ document.onkeydown = function (e) {
         kangaroo = document.querySelector('.kangaroo');
         kangaroo.classList.add('animatekangaroo');
 
+// adding audio when kangaroo jumps
         let audioForKangaroo = new Audio('./assets/Yay.mp3')
         audioForKangaroo.play()
 
@@ -58,6 +46,7 @@ document.onkeydown = function (e) {
 
     }
 
+// specifying keyboard keys for navigating forward and backward
     if (e.keyCode == 39) {
         kangaroo = document.querySelector('.kangaroo');
         kangarooX = parseInt(window.getComputedStyle(kangaroo, null).getPropertyValue('left'));
@@ -71,7 +60,7 @@ document.onkeydown = function (e) {
     }
 }
 
-
+// setting values for ending game when hunter bumps into kangaroo or kangaroo jumps on the hunter
 setInterval(() => {
     kangaroo = document.querySelector('.kangaroo');
     endGame = document.querySelector('.endGame');
@@ -87,23 +76,26 @@ setInterval(() => {
     offSetX = Math.abs(kx - hx);
     offSetY = Math.abs(ky - hy);
 
-    // console.log(offSetX, offSetY);
 
+// ending the game if distance is not as per the specified criteria
     if (offSetX < 150 && offSetY < 52) {
         endGame.style.visibility = 'visible';
         hunter.classList.remove('hunterMove');
         
+// adding audio when kangaroo gets caught
         let Caught = new Audio('./assets/OH-NO.mp3');
         Caught.volume = 1.0;
         Caught.play();
 
+// storing score and redirecting to next page
         Caught.addEventListener('ended', function() {
-            localStorage.setItem('score', score)
+        localStorage.setItem('score', score)
         window.location.href = 'win.html';
 
     });
 }
 
+// increasing score
     else if (offSetX < 70 && jump) {
         score += 10;
         increaseScore(score);
@@ -112,7 +104,7 @@ setInterval(() => {
             jump = true;
         }, 1000);
 
-
+// code for increasing the speed of hunter rapidly
         setTimeout(() => {
             moveDur = parseFloat(window.getComputedStyle(hunter, null).getComputedStyle('move-duration'));
             newDur = moveDur - 0.2;
@@ -121,14 +113,13 @@ setInterval(() => {
 
     }
 
+// code for making the code functional for phone
+
     var windowWidth = window.innerWidth;
     var windowHeight = window.innerHeight;
 
-
-    // offset change for viewport change
     if (windowWidth < 700 && windowHeight < 500) {
-        // console.log('it works')
-        // console.log(offSetX,offSetY)
+        
         if (offSetX < 50 && offSetY <= 60 ) {
             endGame.style.visibility = 'visible';
             hunter.classList.remove('hunterMove');
@@ -168,6 +159,7 @@ function increaseScore(score) {
 
 increaseScore(score);
 
+// code for 60 seconds timer
 
 let timer = document.getElementById('timer')
 let timerId;
