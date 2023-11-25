@@ -47,7 +47,7 @@ PowerPoint Presentation : [ppt link](https://docs.google.com/presentation/d/13wS
 
 Figma : [figma link](https://www.figma.com/file/0FqngVSIsuQAa06X3zmQA5/Untitled?type=design&node-id=0%3A1&mode=design&t=lY8FDQTahTcYOsDq-1)
 
-Deployment link: [click here to play]()
+Deployment link: [click here to play](https://iisshh17.github.io/Roo-Run-CA-2-/)
 
 Demo video link: [Video link]()
 
