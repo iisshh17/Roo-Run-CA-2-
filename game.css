@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nunito&family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nunito&family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins&family=Sofia+Sans+Semi+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kalam&family=Kdam+Thmor+Pro&family=Nunito&family=Nunito+Sans:opsz,wght@6..12,700&family=Pixelify+Sans&family=Poppins&family=Sofia+Sans+Semi+Condensed&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+} 
+
+#rotate{
+    display: none;
+}
+
+.gameContent{
+    background-image: url(assets/background.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.kangaroo{
+    background-image: url(assets/kangaroorun.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 180px;
+    position: absolute;
+    right: 55vw;
+    bottom: 100px;
+}
+
+.hunter{
+    background-image: url("assets/hunter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 220px;
+    width: 199px;
+    position: absolute;
+    bottom:100px;
+    left:50vw;
+}
+
+.animatekangaroo{
+    animation: kangaroo 1s linear;
+}
+
+
+.endGame{
+    visibility: hidden;  
+    border: 5px solid black;
+    background-color: white;
+    width: 250px;
+    height: 60px;
+    font-size: 40px;
+    position: relative;
+    top:200px;
+    left: 650px;
+    text-align: center;
+    font-family:'Kdam Thmor Pro', sans-serif;
+}
+
+.score{
+    position: absolute;
+    right:100px;
+    top:50px;
+    border: 4px solid black;
+    width: 130px;
+    padding:10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 18px;
+    background-color: white;
+}
+
+@keyframes kangaroo {
+    0%{
+        bottom: 100px;
+    }
+    50%{
+        bottom: 500px;
+    }
+    100%{
+        bottom:100px;
+    }
+    
+}
+
+.hunterMove{
+    animation: hunterMove 2.5s linear infinite;
+}
+
+@keyframes hunterMove{
+    0%{
+        left: 90vw;
+    }
+    100%{
+        left: -50%;
+    }
+}
+
+body{
+        
+    overflow: hidden;
+}
+
+
+#timer-box{
+    position: absolute;
+    left:100px;
+    top:50px;
+    border: 4px solid black;
+    width: 100px;
+    padding:10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 18px;
+    background-color: white;
+}
+
+
+#counter-box{
+    width: 50px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 120px;
+    position: absolute;
+    left: 640px;
+    top:5px;
+}
+
+#bgimg{
+    background-color:rgb(241, 144, 196);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+#over{
+    position: relative;
+    top: 150px;
+    left: 530px;
+}
+
+
+#playagain{
+    position: absolute;
+    left:600px;
+    bottom:40px;
+    border: 4px solid black;
+    width: 300px;
+    height: 80px;
+    padding:10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 50px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#playagain:hover{
+    color:white;
+    background-color: rgb(16, 0, 10);
+    cursor: pointer;
+}
+
+#scoreDisplay{
+    width:700px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    top:60px;
+    left: 400px;
+    text-align: center;
+    font-size: 30px;
+    font-family:'Kdam Thmor Pro', sans-serif ;
+    border-radius: 50px;
+}
+
+#homeicon{
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    box-shadow: 5px 5px 5px white;
+
+}
+
+#homeicon:hover{
+    cursor:pointer;
+}
+
+#box3, #scoregot{
+    color: blue;
+}
+
+
+@media only screen and (max-width: 600px){
+    
+    .gameContent{
+        display: none;
+    }
+    #rotate{
+        display: block;
+        width: 100vw;
+        color: white;
+        font-size: 100px;
+        height: 100vh;
+        background-image:url('assets/wait.png')
+        
+    }
+
+}
+
+@media (max-height:500px) and (max-width: 700px){
+
+    .gameContent{
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .kangaroo{
+        height: 140px;
+        width: 200px;
+        bottom:15vh;
+    }
+
+    .hunter{
+        height: 200px;
+        width: 150px;
+        bottom: 15vh;
+    }
+}; 
+
+    

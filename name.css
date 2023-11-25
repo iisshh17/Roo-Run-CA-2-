@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#name{
+    background-image: url(assets/start.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    height:100vh;
+    width: 100vw;
+}
+
+h1{
+    position: absolute;
+    top:10vh;
+    left: 30vw;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(94, 3, 70);
+}
+
+
+#box1{
+    position:absolute;
+    top:5vh;
+    left:25vw;
+}
+
+input{
+    height: 8vh;
+    width: 25vw;
+    background-color: rgb(236, 117, 204);
+    font-size: 50px;
+    text-align:center;
+    color:white;
+}
+
+#box2{
+    position:absolute;
+    top:45vh;
+    left:54vw;
+}
+
+#text{
+    position: absolute;
+    bottom:20vh;
+    left:33vw;
+    font-size: 40px;
+    font-weight: bold;
+    color:rgb(94, 3, 70);
+}
+
+#text:hover{
+    color:rgb(79, 243, 117);
+    cursor:pointer;
+
+}
+
+@media only screen and (max-width: 600px){
+    h1{
+        position: absolute;
+        left:10vw;
+        font-size: 20px;
+    }
+
+    #box1{
+        left:45vw;
+    }
+
+    input{
+        height: 9vh;
+        width: 40vw;
+        font-size:30px;
+    }
+
+    #box2{
+        top:37vh;
+    }
+
+    #text{
+        font-size: 30px;
+        left: 20vw;
+    }
+
+    }

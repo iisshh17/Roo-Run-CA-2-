@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nunito&family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nunito&family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins&family=Sofia+Sans+Semi+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kalam&family=Kdam+Thmor+Pro&family=Nunito&family=Nunito+Sans:opsz,wght@6..12,700&family=Pixelify+Sans&family=Poppins&family=Sofia+Sans+Semi+Condensed&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+} 
+
+#bgimg{
+    background-image: url(assets/wait.png);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+#over{
+    position: relative;
+    top: 150px;
+    left: 530px;
+}
+
+#message{
+    color: aqua;
+    font-size: 80px;
+    position: absolute;
+    top: 16vh;
+    left: 17vw;
+    text-decoration-style: solid;
+    font-family:'Kdam Thmor Pro', sans-serif ;
+}
+
+
+#playagain{
+    position: absolute;
+    left:20vw;
+    bottom:15vh;
+    border: 5px solid aqua;
+    width: 40vh;
+    height: 9vh;
+    padding:10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 50px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#playagain:hover{
+    color:white;
+    background-color: rgb(231, 13, 148);
+    cursor: pointer;
+}
+
+#scoreDisplay{
+    width:50vw;
+    height: 8vh;
+    background-color: white;
+    position: absolute;
+    top:47vh;
+    left: 5vw;
+    text-align: center;
+    font-size: 35px;
+    font-family:'Kdam Thmor Pro', sans-serif ;
+    border-radius: 50px;
+}
+
+#homeicon{
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    box-shadow: 5px 5px 5px white;
+
+}
+
+#homeicon:hover{
+    cursor:pointer;
+}
+
+#box3, #scoregot{
+    color: blue;
+} 
+
+
